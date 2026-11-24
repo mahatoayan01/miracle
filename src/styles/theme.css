@@ -4,48 +4,40 @@
 
 :root {
   /* ========================================================
-     MIRACLE BEAUTY & HAIR SALON - BRAND COLOR PALETTE
+     MIRACLE BEAUTY & HAIR SALON - EDITORIAL ATELIER PALETTE
      Extracted from:
-     - Signboard & Exterior branding: Deep Royal Mulberry Plum (#4A154B)
-     - L'Oréal Professionnel Partner Accent: Antique Champagne Gold (#D4AF37)
-     - Salon Interior Lighting & Walls: Soft Petal & Alabaster Cream (#FAF7F5)
-     - High-contrast typography: Espresso Plum Charcoal (#1F1924)
+     - Storefront Fascia: Deep Mulberry Plum (#4A154B)
+     - L'Oréal Professionnel Gold Accent: Champagne Gold (#D4AF37)
+     - Ambient Salon Glow: Warm Alabaster Cream (#FAF7F5)
+     - Velvet Shadow: Night Plum (#260727)
      ======================================================== */
   
-  /* Primary Brand (Deep Royal Plum) */
   --color-primary: #4A154B;
   --color-primary-hover: #631B64;
-  --color-primary-dark: #2F0A30;
-  --color-primary-light: #722774;
+  --color-primary-dark: #260727;
+  --color-primary-light: #7E2480;
 
-  /* Secondary Brand (L'Oréal Antique Champagne Gold) */
   --color-secondary: #D4AF37;
-  --color-secondary-hover: #B89225;
-  --color-secondary-light: #F6ECCC;
-  --color-secondary-dark: #8F721A;
+  --color-secondary-hover: #BF9B2E;
+  --color-secondary-light: #F7EFCF;
+  --color-secondary-dark: #8C701B;
 
-  /* Accent Tones */
-  --color-accent: #9A246B;
+  --color-accent: #A02672;
   --color-accent-soft: #FDF2F8;
 
-  /* Backgrounds */
   --color-bg: #FAF7F5;
-  --color-bg-alt: #F3ECE7;
+  --color-bg-alt: #F4EFEB;
 
-  /* Surfaces & Cards */
   --color-surface: #FFFFFF;
   --color-surface-elevated: #FFFDFC;
 
-  /* Typography */
-  --color-text: #1F1924;
-  --color-text-muted: #6B6168;
-  --color-text-light: #9B9198;
+  --color-text: #1E1720;
+  --color-text-muted: #695E66;
+  --color-text-light: #9B9098;
 
-  /* Borders & Dividers */
   --color-border: #E8DFD8;
   --color-border-focus: #D4AF37;
 
-  /* Status Colors for Booking Lifecycles */
   --color-success: #15803D;
   --color-success-bg: #DCFCE7;
   --color-warning: #B45309;
@@ -56,7 +48,6 @@
   --color-danger-bg: #FEE2E2;
 }
 
-/* Custom Base Styling */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -73,26 +64,59 @@
   }
 }
 
-/* Custom Utility Enhancements */
+/* Custom Luxury Gradients & Glows */
 .gold-gradient {
-  background: linear-gradient(135deg, #ECC44B 0%, #D4AF37 50%, #9F7E1C 100%);
+  background: linear-gradient(135deg, #F3D368 0%, #D4AF37 50%, #9F7E1C 100%);
 }
 
 .plum-gradient {
-  background: linear-gradient(135deg, #2F0A30 0%, #4A154B 50%, #631B64 100%);
-}
-
-.plum-mesh {
-  background: radial-gradient(circle at 10% 20%, rgba(106, 27, 107, 0.15) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 40%);
+  background: linear-gradient(135deg, #260727 0%, #4A154B 50%, #631B64 100%);
 }
 
 .gold-text-gradient {
-  background: linear-gradient(135deg, #C5A059 0%, #D4AF37 50%, #A68026 100%);
+  background: linear-gradient(135deg, #ECC44B 0%, #D4AF37 50%, #B89225 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.luxury-border {
-  border-image: linear-gradient(to right, #D4AF37, #E8DFD8, #D4AF37) 1;
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 223, 216, 0.8);
+}
+
+.dark-glass-card {
+  background: rgba(38, 7, 39, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle Shimmer for Badges */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.4) 50%, rgba(212,175,55,0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
 }
