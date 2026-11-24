@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ========================================================
+     MIRACLE BEAUTY & HAIR SALON - BRAND COLOR PALETTE
+     Extracted from:
+     - Signboard & Exterior branding: Deep Royal Mulberry Plum (#4A154B)
+     - L'Oréal Professionnel Partner Accent: Antique Champagne Gold (#D4AF37)
+     - Salon Interior Lighting & Walls: Soft Petal & Alabaster Cream (#FAF7F5)
+     - High-contrast typography: Espresso Plum Charcoal (#1F1924)
+     ======================================================== */
+  
+  /* Primary Brand (Deep Royal Plum) */
+  --color-primary: #4A154B;
+  --color-primary-hover: #631B64;
+  --color-primary-dark: #2F0A30;
+  --color-primary-light: #722774;
+
+  /* Secondary Brand (L'Oréal Antique Champagne Gold) */
+  --color-secondary: #D4AF37;
+  --color-secondary-hover: #B89225;
+  --color-secondary-light: #F6ECCC;
+  --color-secondary-dark: #8F721A;
+
+  /* Accent Tones */
+  --color-accent: #9A246B;
+  --color-accent-soft: #FDF2F8;
+
+  /* Backgrounds */
+  --color-bg: #FAF7F5;
+  --color-bg-alt: #F3ECE7;
+
+  /* Surfaces & Cards */
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFDFC;
+
+  /* Typography */
+  --color-text: #1F1924;
+  --color-text-muted: #6B6168;
+  --color-text-light: #9B9198;
+
+  /* Borders & Dividers */
+  --color-border: #E8DFD8;
+  --color-border-focus: #D4AF37;
+
+  /* Status Colors for Booking Lifecycles */
+  --color-success: #15803D;
+  --color-success-bg: #DCFCE7;
+  --color-warning: #B45309;
+  --color-warning-bg: #FEF3C7;
+  --color-info: #1D4ED8;
+  --color-info-bg: #DBEAFE;
+  --color-danger: #B91C1C;
+  --color-danger-bg: #FEE2E2;
+}
+
+/* Custom Base Styling */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Utility Enhancements */
+.gold-gradient {
+  background: linear-gradient(135deg, #ECC44B 0%, #D4AF37 50%, #9F7E1C 100%);
+}
+
+.plum-gradient {
+  background: linear-gradient(135deg, #2F0A30 0%, #4A154B 50%, #631B64 100%);
+}
+
+.plum-mesh {
+  background: radial-gradient(circle at 10% 20%, rgba(106, 27, 107, 0.15) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 40%);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #C5A059 0%, #D4AF37 50%, #A68026 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-border {
+  border-image: linear-gradient(to right, #D4AF37, #E8DFD8, #D4AF37) 1;
+}
